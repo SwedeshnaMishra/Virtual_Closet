@@ -1,0 +1,123 @@
+#intro {
+  height: 600px;
+  /* height: 700px; */
+  /* width: 70%; */
+  position: relative;
+  top: -30px;
+  background-image: url("/images/wardrobe3.jpg");
+  background-position: center;
+  background-size: 100% 600px;
+  background-repeat: no-repeat;
+  /* border-radius: 50% 50%; */
+}
+#intro-text {
+  width: 70%;
+  margin: auto;
+}
+#intro h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(255, 255, 255);
+  padding-top: 100px;
+}
+#intro p {
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 32px;
+}
+
+#smart {
+  width: 70%;
+  margin: auto;
+  /* text-align: center; */
+}
+
+#smart h1 {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+#smart h2 {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(0, 0, 0);
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#smart p {
+  font-size: 21px;
+  font-family: sans-serif;
+  color: rgb(160, 159, 159);
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+
+#smart a {
+  font-size: 20px;
+  text-decoration: none;
+  font-family: sans-serif;
+  background-color: black;
+  color: rgb(244, 244, 244);
+  border-radius: 80px;
+  padding: 15px 70px;
+}
+#smart a:hover {
+  background-color: rgb(236, 173, 184);
+}
+#learn {
+  margin-top: 40px;
+  padding-top: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#steps {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+#steps h1 {
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  margin-top: 50px;
+  padding-top: 100px;
+}
+.bold-text {
+  font-weight: 700;
+}
+.step-num {
+  display: flex;
+  flex-direction: row;
+  padding-left: 12px;
+  margin-top: 30px;
+}
+.step-num img {
+  width: 267px;
+  height: 184px;
+}
+.step-detail {
+  padding-left: 20px;
+}
+.step-detail h2 {
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  margin-top: 0;
+  color: rgb(46, 46, 46);
+}
+.step-detail p {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: rgb(169, 169, 169);
+  line-height: 1.5;
+}

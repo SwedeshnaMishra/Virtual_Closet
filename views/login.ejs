@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="css/login2.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Document</title>
+    <div class="loading-area" id="loadingArea">
+        <div class="banner1 banners">
+          <img src="/images/tops.svg" alt="">
+        </div>
+        <div class="banner2 banners">
+          <img src="/images/bottoms.svg" alt="">
+        </div>
+        <div class="banner3 banners">
+          <img src="/images/dresses.png" alt="">
+        </div>
+        <div class="banner4 banners">
+          <img src="/images/shoes.png" alt="">
+        </div>
+      </div>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" id="logo">CLOSTYLE</a>
+        <div id="login_signup">
+          <ul id="ul_login_signup">
+            <li><a href="/">Home</a></li>
+            <li><a href="/outfits">Outfits</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li id="loginLI"><a href="/login">Login</a></li>
+            <li id="signupLI"><a href="/signup">Sign Up</a></li>
+            <li id="after-login">
+              <img id="head" src="images/human.svg" alt="">
+              <div class="dropdown">
+                <button class="dropbtn">&#9660</button>
+                <form action="/logout" method="POST" class="dropdown-content">
+                  <button>Log Out</button>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <form action="/loginform" method="POST">
+        <h2>LOGIN</h2>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <a href="#">Forgot Password?</a>
+        <div class="loginbutton">
+          <a href="/signup" class="signup">Create new account</a>
+          <button type="submit">Login</button>
+        </div>
+        <hr />
+        <div class="googleSignin">
+          <img src="/images/search.png" alt="" />
+          <a href="#">Sign in with Google</a>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      
+      var loader=document.getElementById("loadingArea")
+      window.addEventListener("load",function(){
+        loader.style.display="none";
+      })  
+    </script>
+     <script src="app/loginlogoutfeature.js"></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Contact Us</title>
+    <div class="loading-area" id="loadingArea">
+      <div class="banner1 banners">
+        <img src="images/tops.svg" alt="" />
+      </div>
+      <div class="banner2 banners">
+        <img src="images/bottoms.svg" alt="" />
+      </div>
+      <div class="banner3 banners">
+        <img src="images/dresses.png" alt="" />
+      </div>
+      <div class="banner4 banners">
+        <img src="images/shoes.png" alt="" />
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/0dc94dd95c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="blur">
+      <header>
+        <nav>
+          <a href="/" id="logo">CLOSTYLE</a>
+          <div id="login_signup">
+            <ul id="ul_login_signup">
+              <li><a href="/">Home</a></li>
+              <li><a href="/outfits">Outfits</a></li>
+              <li><a href="/contactUs">Contact Us</a></li>
+              <li id="loginLI"><a href="/login">Login</a></li>
+              <li id="signupLI"><a href="/signup">Sign Up</a></li>
+              <li id="after-login">
+                <img id="head" src="images/human.svg" alt="">
+                <div class="dropdown">
+                  <button class="dropbtn">&#9660</button>
+                  <form action="/logout" method="POST" class="dropdown-content">
+                    <button>Log Out</button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h1>Contact Us</h1>
+        <section class="content">
+          <div>
+            <img src="/images/icons8-phone-100.png" alt="" />
+            <h2>by phone</h2>
+            <h3>(Monday to Friday, 9am to 6pm)</h3>
+            <p>
+              Local: <br />
+              +92 3175264064 <br />
+              <br />
+              International: <br />
+              1-604-637-0780
+            </p>
+          </div>
+          <div>
+            <img src="/images/icons8-comments-96.png" alt="" />
+            <h2>Give Feedback</h2>
+            <p>
+              Just send us your review <br />
+              or ask any questions <br />
+              and we will give <br />
+              you the help you need.
+            </p>
+            <button onclick="toggle()" id="start">start here</button>
+            <script type="text/javascript">
+              function toggle() {
+                var blur = document.getElementById("blur");
+                blur.classList.toggle("active");
+                var popup = document.getElementById("modal-wrapper");
+                popup.classList.toggle("active");
+              }
+            </script>
+          </div>
+          <div>
+            <img src="/images/live-chat-svgrepo-com.svg" alt="" />
+            <h2>live chat</h2>
+            <p>
+              Chat with a member of our <br />
+              in-house team.
+            </p>
+            <button><a href="https://web.whatsapp.com">start chat</a></button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div id="foot">
+          <div id="docs">
+            <a href="">Service Terms</a>
+            <a href="">Privacy Policy</a>
+          </div>
+          <div id="media-links">
+            <ul>
+              <li><img src="/images/instagram.webp" alt="" /></li>
+              <li><img src="/images/facebook.webp" alt="" /></li>
+              <li><img src="/images/linkedin.webp" alt="" /></li>
+              <li><img src="/images/tiktok.webp" alt="" /></li>
+              <li><img src="/images/youtube.webp" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <div id="modal-wrapper">
+      <button class="cross-btn" onclick="toggle()">
+        <img src="images/xmark-solid.svg" alt="" />
+      </button>
+      <div class="heading">
+        <h1>Your Feedback</h1>
+      </div>
+      <form action="">
+        <div class="rating">
+          <p>What is your opinion of this website?</p>
+          <div class="reactions">
+            <i class="fa-regular fa-face-angry fa-5xl"></i>
+            <i class="fa-regular fa-face-frown fa-5xl"></i>
+            <i class="fa-regular fa-face-meh fa-5xl"></i>
+            <i class="fa-regular fa-face-smile fa-5xl"></i>
+            <i class="fa-regular fa-face-grin fa-5xl"></i>
+          </div>
+          <div class="category">
+            <p>please select your feedback category</p>
+            <div class="flex-container">
+              <div class="textbox">
+                <p>Suggestion</p>
+              </div>
+              <div class="textbox">
+                <p>
+                  I'm Satisfied
+                </p>
+              </div>
+              <div class="textbox">
+                <p>Compliment</p>
+              </div>
+            </div>
+          </div>
+          <div class = "feedback">
+            <p>Please leave your feedback below:</p>
+            <!-- <input type="text" placeholder="You  r thoughts..."> -->
+            <textarea id="textarea" cols="75" rows="5" wrap="soft" placeholder="your thoughts..."></textarea>
+          </div>
+          <button class = "sendbtn" type="submit">Send</button>
+        </div>
+      </form>
+        <script type="text/javascript">
+          const iconElements = document.querySelectorAll(".fa-regular");
+
+          iconElements.forEach((iconElement) => {
+            iconElement.addEventListener("click", () => {
+              iconElements.forEach((icon) => {
+                icon.classList.remove("selected");
+              });
+              iconElement.classList.add("selected");
+            });
+          });
+
+          const categories = document.querySelectorAll(".textbox");
+
+          categories.forEach((category) => {
+            category.addEventListener("click", () => {
+              categories.forEach((cat) => {
+                cat.classList.remove("selected2");
+              });
+              category.classList.add("selected2");
+            });
+          });
+        </script>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var loader = document.getElementById("loadingArea");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+        <script src="app/loginlogoutfeature.js"></script>
+  </body>
+</html>

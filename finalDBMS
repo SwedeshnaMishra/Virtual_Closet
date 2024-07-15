@@ -1,0 +1,108 @@
+drop table if exists sessions;
+
+CREATE TABLE IF NOT EXISTS "sessions" (
+    "sid" varchar NOT NULL COLLATE "default" primary key,
+    "sess" json NOT NULL,
+    "expire" timestamp(6) NOT NULL
+);
+
+
+drop table if exists Users;
+
+create table Users(
+    userid bigint primary key,
+    username varchar(255) unique not NULL,
+    email varchar(255) unique not NULL,
+    password varchar(255) not NULL
+);
+
+drop table if exists category cascade;
+
+create table category(
+	categoryName varchar(50) primary key,
+	clothingType varchar(50),
+	clothingSeason varchar(20)
+);
+
+
+drop table if exists ClothingItem cascade
+
+create table ClothingItem(
+	item_ID serial primary key,
+	userid bigint,
+    ImageUpload varchar(255),
+	categoryName varchar(50),
+    colorName varchar(30),
+	colorCode varchar(20),
+    ClothesSize varchar(5),
+    FabricType varchar(25),
+    description text,
+    constraint userid foreign key (userid) references users(userid),
+    constraint categoryName foreign key (categoryName) references category(categoryName)
+);
+
+create table itemFavourite(
+	item_id int,
+	favourites bool,
+	constraint item_id foreign key (item_id) references clothingitem(item_id)
+)
+
+drop table if exists outfit cascade;
+create table outfit(
+	outfit_ID serial primary key,
+	userid bigint,
+	outfitName varchar(15),
+	overalltype varchar(20),
+	
+	constraint username foreign key (userid) references users(userid)
+);
+
+drop table if exists outfit_clothes;
+create table outfit_Clothes(
+	outfit_ID serial,
+	item_ID serial,
+	
+	constraint outfit foreign key(outfit_ID) references outfit(outfitID),
+	constraint clothingitem foreign key(item_id) references clothingitem(item_ID)
+
+);
+
+drop table if exists occasion;
+create table occasion(
+	occasion_ID serial primary key,
+	occasionName varchar(15),
+	item_ID serial,
+	userid bigint,
+	colorName varchar(30),
+	description text,
+	
+	constraint username foreign key (userid) references users(userid),	
+	constraint item_ID foreign key (item_ID) references clothingitem(item_ID)	
+	
+);
+
+SELECT distinct * FROM clothingitem, occasion WHERE clothingitem.userid = occasion.userid AND clothingitem.userid = 1683618653956
+'select  *
+from clothingitem c
+inner join occasion a  on (c.item_id=a.item_id)
+where c.userid=$1'
+
+
+select  * from clothingitem c inner join occasion a  on (c.item_id=a.item_id) 
+inner join category d on (d.categoryname=c.categoryname)
+where c.userid=1683618653956 and c.item_id=5;
+
+truncate category cascade;
+truncate clothingitem cascade;
+truncate occasion cascade;
+truncate outfit cascade;
+truncate outfit_clothes;
+
+select  * from clothingitem c inner join occasion a  on (c.item_id=a.item_id)  inner join category d 
+on (d.categoryname=c.categoryname and lower(d.clothingtype)=lower($2))  where c.userid= $1
+
+
+select * from category;
+select * from clothingitem;
+select * from occasion;
+select * from users;
