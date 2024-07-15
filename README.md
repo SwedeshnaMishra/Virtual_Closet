@@ -1,14 +1,15 @@
-# Virtual Closet App
+# Virtual Closet Management System
 
 The Virtual Closet is a web application that allows users to upload images of their clothing items and create an online inventory of their wardrobe. This project aims to build an application with an interactive user interface and link it with a database that can store the images and associated data, such as color, size, and fabric type, to enable users to search their wardrobe and create new outfit combinations.
 Technologies Used
 ## Front-end
  - HTML/CSS
  - Javascript
+ - React.js
 
-Back-end
+## Back-end
  - Node.js
- - PostgreSQL
+ - MongoDB
 
 ## Features
 
